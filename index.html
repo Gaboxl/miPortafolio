@@ -1,11 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Lopez-Portafolio</title>
 </head>
 <body>
-    <h1>Trangasmandapios</h1>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <div class="wrap">
+      <p>Gabriel López</p>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero: título + cubo 3D interactivo -->
+  <header>
+    <p class="eyebrow">Portafolio</p>
+    <h1>Modelo, diseño y programo mundos</h1>
+    <p>Estudiante de Ingeniería en Realidad Virtual y Diseño de Juegos Digitales.</p>
+    <div class="cta-row">
+      <a href="#proyectos" class="btn btn-solid">Ver proyectos</a>
+      <a href="#contacto" class="btn btn-line">Contactarme</a>
+    </div>
+
+    <div class="scene">
+      <div class="glow"></div>
+      <div class="cube">
+        <div class="face f1"></div>
+        <div class="face f2"></div>
+        <div class="face f3"></div>
+        <div class="face f4"></div>
+        <div class="face f5"></div>
+        <div class="face f6"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi">
+    <h2>Sobre mí:</h2>
+    <div class="about-grid">
+      <p>Soy Gabriel López y soy estudiante, actualmente cursando el tercer año de la carrera de Ingeniería en Realidad Virtual y Diseño de Juegos Digitales en la Universidad Bernardo O'Higgins. Me quiero especializar en el modelado 3D en Blender, saber lo básico y lo profesional de Excel, y aprender programación en lenguajes como HTML, CSS, Java, C#, C++ y Lua.</p>
+      <div class="about-facts">
+        <div class="fact">
+          <b>Carrera</b>
+          <span>Ingeniería en Realidad Virtual y Diseño de Juegos Digitales</span>
+        </div>
+        <div class="fact">
+          <b>Herramientas</b>
+          <span>Blender, Excel, Programación</span>
+        </div>
+        <div class="fact">
+          <b>Ubicación</b>
+          <span>Santiago, Chile</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rueda de habilidades: 3 anillos SVG concéntricos -->
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <div class="skills-layout">
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <circle cx="130" cy="130" r="100" fill="none" stroke="var(--line)" stroke-width="20"/>
+        <circle cx="130" cy="130" r="100" fill="none" stroke="var(--purple)" stroke-width="20"
+          stroke-dasharray="534" stroke-dashoffset="80"
+          transform="rotate(-90 130 130)" stroke-linecap="round"/>
+
+        <circle cx="130" cy="130" r="72" fill="none" stroke="var(--line)" stroke-width="16"/>
+        <circle cx="130" cy="130" r="72" fill="none" stroke="var(--purple-light)" stroke-width="16"
+          stroke-dasharray="452" stroke-dashoffset="113"
+          transform="rotate(-90 130 130)" stroke-linecap="round"/>
+
+        <circle cx="130" cy="130" r="46" fill="none" stroke="var(--line)" stroke-width="14"/>
+        <circle cx="130" cy="130" r="46" fill="none" stroke="#c4b5fd" stroke-width="14"
+          stroke-dasharray="289" stroke-dashoffset="130"
+          transform="rotate(-90 130 130)" stroke-linecap="round"/>
+      </svg>
+
+      <div class="legend">
+        <div class="legend-item">
+          <span class="dot" style="background: var(--purple)"></span>
+          <div>
+            <b>Modelado 3D en Blender</b>
+            <span>Nivel más fuerte — 85%</span>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span class="dot" style="background: var(--purple-light)"></span>
+          <div>
+            <b>Excel</b>
+            <span>Manejo cómodo — 75%</span>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span class="dot" style="background: #c4b5fd"></span>
+          <div>
+            <b>Programación</b>
+            <span>Conocimientos base — 55%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrusel de proyectos: reemplaza data-* y src por los tuyos -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="proj-track">
+      <div class="proj-card"
+           data-title="Nombre del proyecto 1"
+           data-image="ruta-a-tu-imagen-1.jpg"
+           data-description="Descripción completa: qué problema resuelve, qué hiciste tú específicamente y qué herramientas usaste."
+           data-blend="ruta-a-tu-archivo-1.blend">
+        <img src="ruta-a-tu-imagen-1.jpg" alt="Proyecto de universidad 1">
+        <span class="proj-tag">Ramo — nombre del ramo</span>
+        <h3>Nombre del proyecto</h3>
+        <p>Breve descripción de qué hiciste y qué herramientas usaste.</p>
+        <button class="proj-btn">Ver proyecto</button>
+      </div>
+
+      <div class="proj-card"
+           data-title="Nombre del proyecto 2"
+           data-image="ruta-a-tu-imagen-2.jpg"
+           data-description="Descripción completa: qué problema resuelve, qué hiciste tú específicamente y qué herramientas usaste."
+           data-blend="ruta-a-tu-archivo-2.blend">
+        <img src="ruta-a-tu-imagen-2.jpg" alt="Proyecto de universidad 2">
+        <span class="proj-tag">Ramo — nombre del ramo</span>
+        <h3>Nombre del proyecto</h3>
+        <p>Breve descripción de qué hiciste y qué herramientas usaste.</p>
+        <button class="proj-btn">Ver proyecto</button>
+      </div>
+      
+      <div class="proj-card"
+           data-title="Nombre del proyecto 3"
+           data-image="ruta-a-tu-imagen-2.jpg"
+           data-description="Descripción completa: qué problema resuelve, qué hiciste tú específicamente y qué herramientas usaste."
+           data-blend="ruta-a-tu-archivo-2.blend">
+        <img src="ruta-a-tu-imagen-2.jpg" alt="Proyecto de universidad 3">
+        <span class="proj-tag">Ramo — nombre del ramo</span>
+        <h3>Nombre del proyecto</h3>
+        <p>Breve descripción de qué hiciste y qué herramientas usaste.</p>
+        <button class="proj-btn">Ver proyecto</button>
+      </div>
+
+      <div class="proj-card"
+           data-title="Nombre del proyecto 4"
+           data-image="ruta-a-tu-imagen-2.jpg"
+           data-description="Descripción completa: qué problema resuelve, qué hiciste tú específicamente y qué herramientas usaste."
+           data-blend="ruta-a-tu-archivo-2.blend">
+        <img src="ruta-a-tu-imagen-2.jpg" alt="Proyecto de universidad 4">
+        <span class="proj-tag">Ramo — nombre del ramo</span>
+        <h3>Nombre del proyecto</h3>
+        <p>Breve descripción de qué hiciste y qué herramientas usaste.</p>
+        <button class="proj-btn">Ver proyecto</button>
+      </div>
+
+      <div class="proj-card">
+        <span class="proj-tag">Próximamente</span>
+        <h3>Siguiente proyecto</h3>
+        <p>Este espacio queda libre para ir agregando lo que sigas haciendo en la u.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal: se rellena por JS, uno solo para todas las cartas -->
+  <div class="proj-modal">
+    <div class="proj-modal-content">
+      <button class="proj-modal-close" aria-label="Cerrar">&times;</button>
+      <img class="proj-modal-img" src="" alt="">
+      <h3 class="proj-modal-title"></h3>
+      <p class="proj-modal-desc"></p>
+      <a class="proj-modal-blend" href="" download>Descargar .blend</a>
+    </div>
+  </div>
+
+<!-- Contacto: enlaces directos a redes sociales y correo -->
+  <section id="contacto">
+    <h2>Contáctame por:</h2>
+    <div class="contact-links">
+      <a href="https://wa.me/56949501030" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <b>WhatsApp</b>
+        <span>+56 9 xxxxxxxx </span>
+      </a>
+
+          <!--  Copia el correo al hacer clic -->
+      <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('gabotran0725566@gmail.com'); alert('¡Correo copiado al portapapeles!');" class="contact-card">
+        <b>Gmail</b>
+        <span>gabotran0725566@gmail.com (clic para copiar)</span>
+      </a>
+
+      <a href="https://instagram.com/gabriellopez5854" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <b>Instagram</b>
+        <span>@gabriellopez5854</span>
+      </a>
+
+      <a href="https://discord.com/users/gabo3431" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <b>Discord</b>
+        <span>gabo3431</span>
+      </a>
+      </a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
